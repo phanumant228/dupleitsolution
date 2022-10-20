@@ -13,7 +13,7 @@ const App = () => {
       let res = await fetch(url);
       let data = await res.json();
 
-      const { temp, temp_min, pressure } = data.main;
+      const { temp, temp_min, temp_max } = data.main;
       const { main: weathermood } = data.weather[0];
       const { name } = data;
       const { speed } = data.wind;
@@ -22,7 +22,7 @@ const App = () => {
       const myNewWeatherInfo = {
         temp,
         temp_min,
-        pressure,
+        temp_max,
         weathermood,
         name,
         speed,

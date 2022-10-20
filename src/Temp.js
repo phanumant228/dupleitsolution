@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 const Temp = ({
   temp,
   temp_min,
-  pressure,
+  temp_max,
   weathermood,
   name,
   speed,
@@ -54,7 +54,7 @@ const Temp = ({
 
         <div className="weatherInfo">
           <div className="temperature">
-            <span>{temp}&deg;</span>
+            <span>{temp}&deg; C</span>
             
           </div> 
           <h1 className="Tempreture">Tempreture</h1> 
@@ -79,7 +79,7 @@ const Temp = ({
                 <i className={"wi wi-direction-down"}></i>
               </p>
               <p className="extra-info-leftside">
-                {temp_min} <br />
+                {temp_min}&deg; C <br />
                 Min Temp
               </p>
             </div>
@@ -88,11 +88,11 @@ const Temp = ({
           <div className="weather-extra-info">
             <div className="two-sided-section">
               <p>
-                <i className={"wi wi-rain"}></i>
+                <i className={"wi wi-direction-up"}></i>
               </p>
               <p className="extra-info-leftside">
-                {pressure} <br />
-                Pressure
+                {temp_max}&deg; C <br />
+                Max Temp
               </p>
             </div>
 
